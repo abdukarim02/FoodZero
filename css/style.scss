@@ -225,6 +225,7 @@ $third-family: "Inter", sans-serif;
     padding-bottom: 225px;
     &__content-wrap {
         @include stylcenter(flex, end, space-between);
+        gap: 40px;
     }
     &__wrap-flex {
         max-width: 792px;
@@ -262,7 +263,7 @@ $third-family: "Inter", sans-serif;
         gap: 60px;
     }
     &__wrap-flex {
-        flex: 0 1 40%;
+       max-width: 47%;
     }
     &__flex-price {
         display: block;
@@ -289,6 +290,16 @@ $third-family: "Inter", sans-serif;
     &__content {
         @include stylcenter(flex, Start, space-between);
         gap: 60px;
+    }
+    &__content-bg {
+        width: 935px;
+    }
+    &__bg-img {
+        width: 100%;
+        height: 100%;
+    }
+    &__content-info {
+        width: 649px;
     }
 }
 .features {
@@ -320,12 +331,15 @@ $third-family: "Inter", sans-serif;
         @include stylcenter(flex, center, space-between);
         gap: 60px;
     }
+    &__wrap-flex  {
+        max-width: 47%;
+    }
     &__flex-bg {
-        max-width: 100%;
         max-height: 50%;
         position: relative;
     }
     &__bg-img {
+        max-width: 792px;
         width: 100%;
         height: 100%;
         object-fit: contain;
@@ -340,7 +354,7 @@ $third-family: "Inter", sans-serif;
         @include stylefontz($font-family, 700, 26px, $colorffffff);
     }
     &__flex-blog {
-        width: 587px;
+        max-width: 587px;
         @include stylcenter(flex, center, space-between);
         span {
             @include stylefontz($font-family, 400, 18px, #5e6600);
@@ -366,3 +380,224 @@ $third-family: "Inter", sans-serif;
         @include stylefontz($font-family, 400, 24px, $color000000);  
     }
 }
+.reservation {
+    padding: 237px 0 254px;
+    background: $ebf0e4; 
+    &__content-title {
+        text-align: center;
+    }
+    &__content-text {
+        text-align: center;
+        margin: 18px 0 133px;
+        @include stylefontz($font-family, 400, 24px, $color000000);  
+        line-height: 140%;
+    }
+    &__content-form {
+        max-width: 1644px;
+        margin: 0 auto 133px;
+        @include stylcenter(flex, center, space-between);
+        gap: 48px;
+    }
+    &__form-input {
+        border: 2px solid $color000000;
+        padding: 30px 40px;
+        max-width: 516px;
+        height: 96px;
+        width: 100%;
+        background: transparent;
+        @include stylefontz($font-family, 400, 24px, $color000000);  
+
+    }
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url(../images/Vector\ 1\ \(8\).svg);
+        background-repeat: no-repeat;
+        background-position: right 40px center;
+    }
+    &__content-btn {
+        border: 2px solid var(--000000);
+        padding: 20px 46px;padding: 20px 95px;
+        @include stylcenter(flex, center, center);
+        max-width: 344px;
+        margin: 0 auto;
+        background: $color233000;
+        @include stylefontz($font-family, 400, 24px, $colorffffff);  
+    }
+}
+.category {
+    padding: 128px 0 138px;
+    &__content-info {
+        max-width: 1101px;
+        margin: 0 auto 126px;
+    }
+    &__info-title {
+        text-align: center;
+    }
+    &__info-text {
+        text-align: center;
+        margin-top: 18px;
+    }
+    &__content-wrap {
+        @include stylcenter(flex, center, space-between);
+        flex-wrap: wrap;
+        gap: 60px;
+    }
+    &__wrap-flex {
+        position: relative;
+        max-width: 47%;
+    }
+    &__flex-bg {
+        max-width: 508px;
+        max-height: 710px;
+    }
+    &__bg-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    &__flex-top {
+        width: 100%;
+        height: 100%;
+        padding: 48px 40px;
+        @include stylcenter(flex, baseline, space-between);
+        background: linear-gradient(180deg, rgba(35, 48, 0, 0.2) 0%, rgba(35, 48, 0, 0.2) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    &__top-link {
+        @include stylefontz($font-family, 700, 48px, $color233000);  
+    }
+}
+.testimonials {
+    padding: 118px 0 142px;
+    .swiper {
+        @include stylcenter(flex, center, space-between);
+    }
+    .swiper-slide {
+        @include stylcenter(flex, baseline, space-between);
+        flex-direction: column;
+        gap: 89px;
+    }
+    &__slide-text {
+        width: 1189px;
+        position: relative;
+        @include stylefontz($font-family, 700, 48px, $color233000);  
+        svg {
+            position: absolute;
+            top: 0;
+            right: -153px;
+        }
+    }
+    &__slide-logo {
+        @include stylcenter(flex, center, space-between);
+        gap: 60px;
+    }
+    &__info-name {
+        @include stylefontz($font-family, 700, 32px, $color233000);
+        line-height: 150%;  
+    }
+    &__info-text {
+        @include stylefontz($font-family, 400, 18px, $color233000);
+    }
+    &__optional {
+        @include stylcenter(flex, center, space-between);
+        position: absolute;
+        right: 370px;
+        bottom: 0;
+        width: 238px;
+        height: 48px;
+    }
+    .swiper-button-next:after {
+        display: none;
+    } 
+    .swiper-button-prev:after  {
+        display: none;
+    }
+    .swiper-pagination {
+        @include stylefontz($font-family, 700, 32px, $color233000);
+    }
+}
+.footer {
+    padding: 132px 0 74px;
+    background: $color233000;
+    &__content {
+        @include stylcenter(flex, center, space-between);
+        margin-bottom: 137px;
+    }
+    &__content-logo {
+        @include stylefontz($font-family, 700, 68px, $colorffffff);
+    }
+    &__content-contact {
+        height: 231px;
+        @include stylcenter(flex, start, space-between);
+        flex-direction: column;
+    }
+    &__contact-name {
+        @include stylefontz($font-family, 700, 32px, $colorffffff);
+    }
+    &__contact-item {
+        height: 128px;
+        @include stylcenter(flex, start, space-between);
+        flex-direction: column;
+    }
+    &__item-list {
+        @include stylcenter(flex, start, space-between);
+        flex-direction: column;
+    }
+    &__lisst-link {
+        @include stylefontz($font-family, 400, 18px, $colorffffff);      
+        line-height: 139%;
+    }
+    &__contact-form {
+        height: 231px;
+        @include stylcenter(flex, start, space-between);
+        flex-direction: column;
+    }
+    &__form-name {
+        @include stylefontz($font-family, 700, 32px, $colorffffff);     
+    }
+    &__form-body {
+        width: 792px;
+        @include stylcenter(flex, center, space-between);
+    }
+    &__body-input {
+        background: transparent;
+        border: 2px solid $colorffffff;
+        width: 523px;
+        height: 96px;
+        padding: 30px 40px;
+        @include stylefontz($font-family, 400, 24px, $colorffffff);   
+    }
+    &__body-btn {
+        padding: 20px 46px;
+        width: 241px;
+        height: 88px;
+        @include stylefontz($font-family, 700, 32px, $colorffffff);   
+        border: 2px solid $color5e6600;
+        background: $color5e6600;
+    }
+    &__form-text {
+        @include stylefontz($font-family, 400, 14px, $colorffffff);   
+    }
+    &__bottom {
+        border-top: 2px dashed $colorffffff;
+        padding-top: 58px;
+    }
+    &__bottom-content {
+        @include stylcenter(flex, center, space-between);
+    }
+    &__bottom-text {
+        @include stylefontz($font-family, 400, 24px, $colorffffff);   
+    }
+    &__bottom-social {
+        width: 194px;
+        @include stylcenter(flex, center, space-between);
+    }
+}
+// @media (max-width: ;) {
+    
+// }
